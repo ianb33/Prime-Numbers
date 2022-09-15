@@ -7,10 +7,14 @@ namespace PrimeNumbers
     {
         static void Main(string[] args)
         {
-            for(int i = 2; i < 7920; i++)
+            List<int> primes = new List<int>();
+            primes.Add(2);
+            for (int i = 3; i < 15485863; i+=2)
             {
                 bool isPrime = true;
-                for(int j = 2; j < i ; j++)
+                int max = (int)Math.Sqrt(i);
+                
+                for (int j = 3; j <= max; j+=2)
                 {
                     if (i % j == 0)
                     {
@@ -20,7 +24,8 @@ namespace PrimeNumbers
                 }
                 if (isPrime)
                 {
-                    Console.WriteLine(i);
+                    //Console.WriteLine(i);
+                    primes.Add(i);
                 }
             }
  

@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System.Diagnostics;
+using System.Globalization;
 
 namespace PrimeNumbers
 {
@@ -16,13 +17,13 @@ namespace PrimeNumbers
                         isPrime = false;
                         break;
                     }
-
-                    if (isPrime)
-                    {
-                        Console.WriteLine(i);
-                    }
+                }
+                if (isPrime)
+                {
+                    Console.WriteLine(i);
                 }
             }
+ 
         }
     }
 }
